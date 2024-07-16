@@ -1,0 +1,8 @@
+services:
+  infra:
+    image: vanishvpn-infra
+    build:
+      context: ./infra
+      dockerfile: Dockerfile
+    volumes:
+      - ./infra/src:/app
