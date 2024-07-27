@@ -1,17 +1,26 @@
 FROM node:lts-slim
 
+# Install System dependencies
 RUN apt update -y
-
 RUN apt install unzip curl -y
 
 WORKDIR /app
 
+# Setup AWS CLI
 COPY setup-aws-cli.sh .
-
 RUN chmod +x ./setup-aws-cli.sh && ./setup-aws-cli.sh
 
+# Setup AWS CDK
 RUN npm -g install typescript
-
 RUN npm install -g aws-cdk
 
-CMD [ "bash" ]
+# Install dependencies
+COPY package.json .
+RUN yarn install
+
+# Copy source code
+COPY ./src .
+
+EXPOSE 3000
+
+CMD [ "yarn", "start" ]
