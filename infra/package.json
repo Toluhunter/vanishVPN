@@ -1,0 +1,19 @@
+{
+  "name": "vanishVPN",
+  "version": "1.0.0",
+  "description": "is an advanced Express.js API designed to seamlessly integrate with AWS CDK (Cloud Development Kit) for the automated creation, management, and destruction of AWS VPN infrastructure. This backend service provides users with a robust and user-friendly interface to dynamically manage their VPNs, ensuring both flexibility and security.",
+  "main": "src/app.js",
+  "repository": "https://github.com/Toluhunter/vanishVPN.git",
+  "author": "toluhunter",
+  "license": "Apache",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": false,
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "typescript": "^5.5.4"
+  }
+}

@@ -5,4 +5,7 @@ services:
       context: ./infra
       dockerfile: Dockerfile
     volumes:
-      - ./infra/src:/app
+      - /app/node_modules
+      - ./infra:/app
+    expose:
+      - 3000
