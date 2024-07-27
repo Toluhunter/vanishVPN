@@ -1,7 +1,7 @@
 url=""
 
 # Set appropriate url based on machine architecture
-if [ $(uname -m) = "aarch64" ]; then
+if [ $(uname -m) == "aarch64" ]; then
     url="https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip"
 else
     url="https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip"
