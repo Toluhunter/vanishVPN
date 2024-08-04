@@ -4,6 +4,8 @@ services:
     build:
       context: ./infra
       dockerfile: Dockerfile
+    env_file:
+      - ./infra/.env
     volumes:
       - /app/node_modules
       - ./infra:/app
